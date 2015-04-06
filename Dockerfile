@@ -1,0 +1,5 @@
+FROM python:2-onbuild
+
+ADD . .
+
+CMD python -u ./main.py $MESOS_MASTER_HOST $CARBON_HOST $GRAPHITE_PREFIX $PERIOD_SECONDS
