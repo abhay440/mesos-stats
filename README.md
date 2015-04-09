@@ -20,5 +20,5 @@ Where:
 
 ```shell
 docker build --rm --tag mesos-stats .
-docker run --name mesos-stats -d mesos-stats
+docker run -d -e MESOS_MASTER_HOST=<MESOS_MASTER_HOST> -e CARBON_HOST=<CARBON_HOST> -e GRAPHITE_PREFIX=<GRAPHITE_PREFIX> -e PERIOD_SECONDS=<SLEEP_SECONDS> mesos-stats
 ```
